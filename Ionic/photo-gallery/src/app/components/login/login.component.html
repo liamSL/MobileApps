@@ -1,0 +1,15 @@
+<p>
+  login works!
+</p>
+
+ <h1 *ngIf = "auth.isLoggedIn()">
+   You are logged in!
+ </h1>
+
+<label for = "email">Email</label>
+<ion-input id = "email" placeholder = "Type your Email"></ion-input>
+
+<label for = "password">Password</label>
+<ion-input id = "password" placeholder = "Type your Password"></ion-input>
+
+<ion-button (click) = "signIn()">Sign in</ion-button>
