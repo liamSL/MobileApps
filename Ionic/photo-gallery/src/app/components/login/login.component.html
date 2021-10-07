@@ -7,9 +7,11 @@
  </h1>
 
 <label for = "email">Email</label>
-<ion-input id = "email" placeholder = "Type your Email"></ion-input>
+<ion-input [(ngModel)]="email" id = "email" placeholder = "Type your Email"></ion-input>
 
 <label for = "password">Password</label>
-<ion-input id = "password" placeholder = "Type your Password"></ion-input>
+<ion-input [(ngModel)]="password" id = "password" placeholder = "Type your Password"></ion-input>
 
 <ion-button (click) = "signIn()">Sign in</ion-button>
+
+<ion-button routerLink="/user-benefits"> User Benefits screen</ion-button>
