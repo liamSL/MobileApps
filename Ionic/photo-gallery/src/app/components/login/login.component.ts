@@ -18,6 +18,9 @@ export class LoginComponent implements OnInit {
   signIn(){
     this.auth.signInWithEmail(this.email, this.password).then(() => {
       this.router.navigate(["/user-profile"], { queryParams: { id: 1 } });
+    }).catch((error) => {
+      alert("error has occured\nerror: " + error);
+      ;
     })
   }
 
