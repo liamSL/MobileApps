@@ -2,6 +2,8 @@
   login works!
 </p>
 
+<h1 *ngIf="auth.isLoggedIn()">You are signed in as {{auth.getUserData().email}}!</h1>
+
  <h1 *ngIf = "auth.isLoggedIn()">
    You are logged in!
  </h1>
@@ -12,6 +14,8 @@
 <label for = "password">Password</label>
 <ion-input [(ngModel)]="password" id = "password" placeholder = "Type your Password"></ion-input>
 
+<button (click)="signInWithGoogle()">Sign In with Google</button>
+<br>
 <ion-button (click) = "signIn()">Sign in</ion-button>
-
+<br>
 <ion-button routerLink="/user-benefits"> User Benefits screen</ion-button>

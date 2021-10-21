@@ -20,8 +20,9 @@ export class LoginComponent implements OnInit {
       this.router.navigate(["/user-profile"], { queryParams: { id: 1 } });
     }).catch((error) => {
       alert("error has occured\nerror: " + error);
-      ;
-    })
+    });
   }
-
+  signInWithGoogle() {
+    this.auth.signInWithGooglePopUp();
+    }   
 }
